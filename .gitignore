@@ -111,3 +111,6 @@ static_collected
 
 # flake8 config
 setup.cfg
+
+# settings.py
+settings.py
