@@ -9,8 +9,25 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>New page</h1>
-        {{ a }}
-        <h1>{{ text }}</h1>
-    </body>
+        {% if object_list %}
+        <table border="1">
+        <tr>
+            <th>Идентификатор</th>
+            <th>Дата</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+
+        {% for obj in object_list %}
+        </tr>
+            <th>{{ obj.id }}</th>
+            <th>{{ obj.order_id }}</th>
+            <th>{{ obj.order_name }}</th>
+            <th>{{ obj.order_phone }}</th>
+        <tr>
+        {% endfor %}
+        {% else %}
+        Нет данных
+        {% endif %}
+        </tr>
+        </table>
 </html>
